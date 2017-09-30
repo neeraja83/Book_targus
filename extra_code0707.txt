@@ -1,0 +1,64 @@
+
+styles.css
+-----------
+.book-coll{
+    float: right;
+    list-style:none;
+ }
+
+.book-coll li{
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-family:'Lato','Arial',sans-serif;
+    }
+
+.book-coll li blockquote cite{
+    display: inline-block; 
+    }
+
+.book-coll li blockquote cite a{
+    display: inline-block; 
+    }
+    
+    .backgd{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0.69)),url(img/hero.jpg);
+border: none;
+display: inline-block;
+font-family: 'Ubuntu', sans-serif;
+font-weight:400;
+font-size: 1.3em;
+font-style: italic;
+color:#F5F5F5;
+text-align: right;
+margin-top:4.8%;
+margin-right:2%;
+}
+    
+----------------
+style1.css
+
+.jumbotron
+{
+  background-color: url(img/13685.jpg);
+    background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+.jumbotron h1
+{
+  color: #fff;
+  font-size: 100px;
+  text-shadow: 4px 3px 0 #df4566, 9px 8px 0 rgba(0,0,0,0.15);
+}
+
+ /* Magnific popups */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 200px;
+  margin: 20px auto;
+}

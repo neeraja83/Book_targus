@@ -1,0 +1,13 @@
+Major Changes
+
+1. add modals from booksbr.html(read more button) to index1.html & subjects.html
+2.Learn Google analytics tracking event
+3.Do some Sass files for the project and react.js(thinking)
+
+Minor changes
+
+1. Bring margin of Btn grp in the booksbr.html to left for visibility of dropdowns
+2. Remove the white line in testimonials- index1.html
+
+
+Start with new arrivals.html

@@ -1,0 +1,311 @@
+//colors
+$white: #fff;
+$color_fuscous_gray_approx: #555;
+$color_alto_approx: #ddd;
+$color_suva_gray_approx: #888;
+$color_zest_approx: #e67e22;
+$color_tory_blue_81_approx: rgba(16, 82, 159, 0.81);
+$color_fuscous_gray_55_approx: rgba(85, 85, 85, 0.55);
+$color_mine_shaft_approx: #333;
+$color_azure_approx: #3b5998;
+$color_cerulean_approx: #00aced;
+$color_valencia_approx: #dd4b39;
+$color_wedgewood_approx: #517fa4;
+$color_logan_approx: #aab2d0;
+$color_boston_blue_approx: #428bca;
+
+//fonts
+$font_0: Lato;
+$font_1: Arial;
+$font_2: sans-serif;
+$font_3: Arvo;
+$font_4: Georgia;
+$font_5: Times;
+$font_6: serif;
+$font_7: PT Sans;
+$font_8: Helvetica;
+
+//urls
+$url_0: url(http://getbootstrap.com/dist/css/bootstrap.css);
+$url_1: url(img/pixel_weave.png);
+$url_2: url(img/ep_naturalblack.png);
+$url_3: url(img/vertical_cloth.png);
+$url_4: url(img/tileable_wood_texture.png);
+
+//transition
+$transition-1: color 0.7s;
+$transition-2: color 0.2s;
+$transition-3: color 0.3s;
+
+$width: 15px;
+
+//@extend-elements
+//original selectors
+//.main-nav li a:link, .main-nav li a:visited
+%extend_1 {
+  padding: 8px 0;
+  color: $white;
+  text-decoration: none;
+  font-size: 100%;
+  @include transition($transition-1);
+   //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+  transition-timing-function: ease-in-out;
+}
+
+//original selectors
+//.footer-nav li a:link, .footer-nav li a:visited, .social-links li a:link, .social-links li a:visited
+%extend_2 {
+  text-decoration: none;
+  border: 0;
+  @include transition($transition-2);
+  }
+
+//original selectors
+//.browse-list a:hover, .browse-list a:active
+%extend_3 {
+  color: $color_zest_approx;
+  @include transition($transition-3);
+  //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+  transition-timing-function: ease-in;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: $white;
+  color: $color_fuscous_gray_approx;
+  font-family: $font_0, $font_1, $font_2;
+  font-weight: 300;
+  font-size: 100px;
+  text-rendering: optimizeLegibility;
+}
+body {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background: $url_1 repeat 0 0;
+}
+h1 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h2 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h3 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h4 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h5 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h6 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+.jumbotron {
+  text-align: center;
+  margin-top: -9px;
+  background-image: linear-gradient($color_tory_blue_81_approx,$color_fuscous_gray_55_approx),$url_4;
+  h3 {
+    font-family: $font_3, $font_4, $font_5, $font_6;
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  h2 {
+    font-family: $font_3, $font_4, $font_5, $font_6;
+  }
+  h5 {
+    font-family: $font_3, $font_4, $font_5, $font_6;
+  }
+  p {
+    font-family: $font_7, $font_8, $font_1, $font_2;
+    font-family: $font_7, $font_8, $font_1, $font_2;
+    font-weight: lighter;
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+p {
+  font-family: $font_7, $font_8, $font_1, $font_2;
+}
+div {
+  font-family: $font_7, $font_8, $font_1, $font_2;
+}
+.row {
+  max-width: 1140 px;
+  margin: 0 auto;
+}
+.navbar {
+  background: $url_2 repeat 0 0;
+  padding-bottom: 20px;
+}
+.social-links {
+  list-style: none;
+  float: right;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    a {
+      &:hover {
+        color: $color_alto_approx;
+      }
+      &:active {
+        color: $color_alto_approx;
+      }
+      &:link {
+        color: $color_suva_gray_approx;
+        @extend %extend_2;
+        font-size: 170%;
+      }
+      &:visited {
+        color: $color_suva_gray_approx;
+        @extend %extend_2;
+        font-size: 170%;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.footer-nav {
+  list-style: none;
+  float: left;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    a {
+      &:hover {
+        color: $color_alto_approx;
+      }
+      &:active {
+        color: $color_alto_approx;
+      }
+      &:link {
+        color: $color_suva_gray_approx;
+        @extend %extend_2;
+      }
+      &:visited {
+        color: $color_suva_gray_approx;
+        @extend %extend_2;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+footer {
+  background-color: $color_mine_shaft_approx;
+  padding: 5px;
+  font-size: 80%;
+  p {
+    color: $color_suva_gray_approx;
+    margin-top: 70px;
+  }
+}
+.container {
+  border-left: 25px;
+  vertical-align: center;
+}
+.btn-group {
+  float: right;
+}
+.main-nav {
+  margin-left: -20px;
+  li {
+    list-style: none;
+    display: inline-block;
+    width: 300px;
+    a {
+      display: block;
+      vertical-align: middle;
+      &:link {
+        @extend %extend_1;
+      }
+      &:visited {
+        @extend %extend_1;
+      }
+      &:hover {
+        color: $color_zest_approx;
+      }
+      &:active {
+        color: $color_zest_approx;
+      }
+    }
+    img {
+      margin-left: 5px;
+    }
+  }
+}
+.ion-social-facebook {
+  @include transition($transition-2);
+  &:hover {
+    color: $color_azure_approx;
+  }
+}
+.ion-social-twitter {
+  @include transition($transition-2);
+  &:hover {
+    color: $color_cerulean_approx;
+  }
+}
+.ion-social-googleplus {
+  @include transition($transition-2);
+  &:hover {
+    color: $color_valencia_approx;
+  }
+}
+.ion-social-instagram {
+  @include transition($transition-2);
+  &:hover {
+    color: $color_wedgewood_approx;
+  }
+}
+.disp {
+  background-color: $white;
+}
+.browse-list {
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 15%;
+  padding: 10px;
+  color: $color_logan_approx;
+  a {
+    text-decoration: none;
+    &:link {
+      color: $color_boston_blue_approx;
+      width: 400px;
+    }
+    &:visited {
+      color: $color_boston_blue_approx;
+      width: 400px;
+    }
+    &:hover {
+      @extend %extend_3;
+    }
+    &:active {
+      @extend %extend_3;
+    }
+  }
+}
+.home-page-browse-grid {
+      @include column-gap($width);
+}
+.footer p {
+  text-align: center;
+}
+.list-group ul li {
+  margin-left: 15px;
+}
+.list_fm a {
+  background-image: $url_3;
+}

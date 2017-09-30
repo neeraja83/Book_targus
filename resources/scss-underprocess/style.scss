@@ -1,0 +1,527 @@
+//colors
+$white: #fff;
+$color_fuscous_gray_approx: #555;
+$black_78: rgba(0, 0, 0, 0.78);
+$black_69: rgba(0, 0, 0, 0.69);
+$color_zest_approx: #e67e22;
+$color_korma_82_approx: rgba(132, 69, 14, 0.82);
+$color_astral_approx: #3276b1;
+$color_hot_cinnamon_approx: #cf6d17;
+$black_80: rgba(0, 0, 0, 0.8);
+$silver: #c0c0c0;
+$color_copper_approx: #af722b;
+$color_mine_shaft_approx: #333;
+$color_suva_gray_approx: #888;
+$color_azure_approx: #3b5998;
+$color_cerulean_approx: #00aced;
+$color_valencia_approx: #dd4b39;
+$color_wedgewood_approx: #517fa4;
+$color_alto_approx: #ddd;
+
+//fonts
+$font_0: Lato;
+$font_1: Arial;
+$font_2: sans-serif;
+$font_3: Arvo;
+$font_4: Georgia;
+$font_5: Times;
+$font_6: serif;
+$font_7: PT Sans;
+$font_8: Helvetica;
+
+//urls
+$url_0: url(img/13685.jpg);
+$url_1: url(img/lisbon-3.jpg);
+$url_2: url(img/witewall_3.png);
+
+//@extend-elements
+//original selectors
+//.main-nav li a:link, .main-nav li a:visited
+%extend_1 {
+  padding: 8px 0;
+  text-decoration: none;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: border-bottom 0.2s;
+}
+
+//original selectors
+//.book-thumb a:link, .book-thumb a:visited
+%extend_2 {
+  color: $white;
+  font-size: 100%;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: border-bottom 0.2s;
+}
+
+//original selectors
+//.browse-list a:hover, .browse-list a:active
+%extend_3 {
+  color: $color_zest_approx;
+  text-decoration: underline;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color 0.3s;
+  //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+  transition-timing-function: ease-in;
+}
+
+//original selectors
+//.btn:link, .btn:visited
+%extend_4 {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 200px;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: background-color 0.2s,border 0.3s,color 0.2s;
+}
+
+//original selectors
+//.btn-full:link, .btn-full:visited
+%extend_5 {
+  background-color: $color_zest_approx;
+  border: 1px solid $color_zest_approx;
+  margin-right: 15px;
+}
+
+//original selectors
+//.footer-nav li a:link, .footer-nav li a:visited, .social-links li a:link, .social-links li a:visited
+%extend_6 {
+  text-decoration: none;
+  border: 0;
+  color: $color_suva_gray_approx;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color 0.2s;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+html {
+  background-color: $white;
+  color: $color_fuscous_gray_approx;
+  font-family: $font_0, $font_1, $font_2;
+  font-weight: 300;
+  font-size: 100px;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h2 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h3 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h4 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h5 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+h6 {
+  font-family: $font_3, $font_4, $font_5, $font_6;
+}
+p {
+  font-family: $font_7, $font_8, $font_1, $font_2;
+}
+div {
+  font-family: $font_7, $font_8, $font_1, $font_2;
+}
+.row {
+  max-width: 1140 px;
+  margin: 0 auto;
+}
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translate(-50%,-50%);
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 1px;
+    word-spacing: 2.5px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 240%;
+    font-weight: 300;
+    color: $color_zest_approx;
+  }
+  h2 {
+    text-align: justify;
+    color: $white;
+    letter-spacing: 1px;
+    word-spacing: 2.5px;
+    font-size: 125%;
+    font-weight: 10;
+  }
+}
+.white-popup {
+  text-align: center;
+}
+.section-testimonials {
+  text-align: center;
+  color: $white;
+  letter-spacing: 1px;
+  word-spacing: 2.5px;
+  background-image: linear-gradient($black_80,$black_80),$url_1;
+  background-size: cover;
+  list-style: none;
+  background-attachment: fixed;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font_3, $font_4, $font_5, $font_6;
+    padding: 2%;
+    color: $color_zest_approx;
+  }
+  blockquote {
+    padding: 2%;
+    line-height: 145%;
+    position: relative;
+    &:before {
+      content: "\201C";
+      font-size: 400%;
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+    }
+  }
+  ul li {
+    display: inline-block;
+    margin-right: 20px;
+    h5 {
+      font-family: $font_3, $font_4, $font_5, $font_6;
+    }
+    p {
+      font-family: $font_7, $font_8, $font_1, $font_2;
+    }
+    blockquote cite {
+      font-size: 90%;
+      margin-top: 25px;
+      display: inline-block;
+      img {
+        vertical-align: middle;
+        height: 45px;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+#myCarousel {
+  .carousel-inner {
+    text-align: center;
+  }
+  .carousel-indicators {
+    right: 50%;
+    top: 318px;
+    bottom: 0;
+    margin-right: -19px;
+    li {
+      background: $silver;
+    }
+    .active {
+      background: $color_copper_approx;
+    }
+  }
+  .carousel-control {
+    background: none;
+    color: $color_copper_approx;
+    font-size: 2.3em;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    margin-top: 30px;
+  }
+}
+footer {
+  background-color: $color_mine_shaft_approx;
+  padding: 5px;
+  font-size: 80%;
+  p {
+    text-align: center;
+    color: $color_suva_gray_approx;
+    margin-top: 10px;
+  }
+}
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 50px;
+  li {
+    display: inline-block;
+    margin-right: 40px;
+    font-family: $font_0, $font_1, $font_2;
+    a {
+      &:link {
+        text-transform: uppercase;
+        color: $white;
+        @extend %extend_1;
+      }
+      &:visited {
+        text-transform: uppercase;
+        color: $white;
+        @extend %extend_1;
+      }
+      &:hover {
+        border-bottom: 2px solid $color_zest_approx;
+      }
+      &:active {
+        border-bottom: 2px solid $color_zest_approx;
+      }
+    }
+  }
+}
+.btn-full {
+  &:link {
+    color: $white;
+    @extend %extend_5;
+  }
+  &:visited {
+    color: $white;
+    @extend %extend_5;
+  }
+  &:hover {
+    border: 1px solid $color_hot_cinnamon_approx;
+  }
+  &:active {
+    border: 1px solid $color_hot_cinnamon_approx;
+  }
+}
+.btn-ghost {
+  &:active {
+    color: $white;
+    border: 1px solid $color_hot_cinnamon_approx;
+  }
+  &:hover {
+    color: $white;
+    border: 1px solid $color_hot_cinnamon_approx;
+  }
+  &:link {
+    border: 1px solid $color_zest_approx;
+    color: $color_zest_approx;
+  }
+  &:visited {
+    border: 1px solid $color_zest_approx;
+    color: $color_zest_approx;
+  }
+}
+.input-group-addon {
+  color: $white;
+  background: $color_astral_approx;
+}
+.container-fluid {
+  vertical-align: middle;
+  background-image: $url_2;
+  background-size: cover;
+  background-attachment: fixed;
+  border-left: 10px;
+}
+.footer-nav {
+  list-style: none;
+  float: left;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      &:link {
+        @extend %extend_6;
+      }
+      &:visited {
+        @extend %extend_6;
+      }
+      &:hover {
+        color: $color_alto_approx;
+      }
+      &:active {
+        color: $color_alto_approx;
+      }
+    }
+  }
+}
+.social-links {
+  list-style: none;
+  float: right;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      &:link {
+        @extend %extend_6;
+        font-size: 170%;
+      }
+      &:visited {
+        @extend %extend_6;
+        font-size: 170%;
+      }
+      &:hover {
+        color: $color_alto_approx;
+      }
+      &:active {
+        color: $color_alto_approx;
+      }
+    }
+  }
+}
+header {
+  background-image: linear-gradient($black_78,$black_69),$url_0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 190vh;
+}
+.logo {
+  height: 110px;
+  width: auto;
+  float: left;
+  margin-left: 25px;
+  margin-top: 10px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 90%;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 2px 7px 8px $color_korma_82_approx;
+}
+.book-sb {
+  margin-left: 410px;
+}
+.bcenter {
+  margin-left: 135px;
+}
+.modal-dialog {
+  width: 700px;
+  height: 600px;
+}
+.btn-group {
+  margin-top: 8%;
+  margin-bottom: 15%;
+  margin-right: 20%;
+  float: left;
+}
+.btn {
+  &:link {
+    @extend %extend_4;
+  }
+  &:visited {
+    @extend %extend_4;
+  }
+  &:hover {
+    background-color: $color_hot_cinnamon_approx;
+  }
+  &:active {
+    background-color: $color_hot_cinnamon_approx;
+  }
+}
+.ion-social-facebook {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color 0.2s;
+  &:hover {
+    color: $color_azure_approx;
+  }
+}
+.ion-social-twitter {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color 0.2s;
+  &:hover {
+    color: $color_cerulean_approx;
+  }
+}
+.ion-social-googleplus {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color 0.2s;
+  &:hover {
+    color: $color_valencia_approx;
+  }
+}
+.ion-social-instagram {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color 0.2s;
+  &:hover {
+    color: $color_wedgewood_approx;
+  }
+}
+.book-coll li {
+  vertical-align: middle;
+  blockquote cite a {
+    text-align: justify;
+  }
+}
+.book-thumb a {
+  color: $color_zest_approx;
+  text-align: center;
+  vertical-align: middle;
+  &:link {
+    @extend %extend_2;
+  }
+  &:visited {
+    @extend %extend_2;
+  }
+  &:hover {
+    color: $color_zest_approx;
+  }
+  &:active {
+    color: $color_zest_approx;
+  }
+}
+.browse-list a {
+  text-decoration: none;
+  &:hover {
+    @extend %extend_3;
+  }
+  &:active {
+    @extend %extend_3;
+  }
+}
+.carousel-fade .carousel-inner {
+  .item {
+    opacity: 0;
+    //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+    transition-property: opacity;
+    blockquote {
+      h5 {
+        font-family: $font_3, $font_4, $font_5, $font_6;
+      }
+      p {
+        font-family: $font_7, $font_8, $font_1, $font_2;
+      }
+    }
+  }
+  .active {
+    opacity: 1;
+    blockquote {
+      h5 {
+        font-family: $font_3, $font_4, $font_5, $font_6;
+      }
+      p {
+        font-family: $font_7, $font_8, $font_1, $font_2;
+      }
+    }
+  }
+}
+.item blockquote {
+  border-left: none;
+  margin: 0;
+  img {
+    margin-bottom: 10px;
+  }
+}
