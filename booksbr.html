@@ -3,10 +3,15 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!--Bootstrap & AngularJS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+    <script src="script.js"></script>
+
+    <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
@@ -16,7 +21,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i" rel="stylesheet" type="text/css">
        
     <script>
-        
             $(document).ready(function() {
               //Set the carousel options
               $('#myCarousel').carousel({pause: true,interval: 4000,});});
@@ -29,9 +33,7 @@
     <title>Targus</title>
 </head>
 
-<body>
-
-    
+<body ng-app="RoutingApp" ng-controller="TestCtrl">
 <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header pull-left">
@@ -41,14 +43,13 @@
         <form class="navbar-form navbar-right">
             <div class="form-group">
             <input type="text" placeholder="Email" class="form-control">
-            </div>                                         <div class="form-group">
+           
             <input type="password" placeholder="Password" class="form-control">
             </div>    
             <button type="submit" class="btn btn-success">Sign in</button>
         </form>
        </div>
         <!--/.navbar-collapse -->
-
        </div>
 </div>
      
@@ -58,17 +59,18 @@
                     <div class="list-group">
                         <ul>
                             <h3>Browse by subject:</h3>
-                            <li class="active"><a href="index.html" data-toggle="tooltip" data-placement="right" title="Arts">Arts and Entertainment</a></li>
-                            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Biography">Biography</a></li>
+                            
+                            <li class="active"><a href="" ng-click="click1()" data-toggle="tooltip" data-placement="right" title="Arts">Arts and Entertainment</a></li>
+                            <li><a href="" ng-click="click1()" data-toggle="tooltip" data-placement="right" title="Biography">Biography</a></li>
                             <li><a href="#" data-toggle="tooltip" data-placement="right" title="Business">Business</a></li>
                             
                             <li><a href="#" data-toggle="tooltip" data-placement="right" title="Calendars">Calendars, Notebooks, and Gifts</a></li>
                             <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Children's">Childrens</a></li>
                             <li><a href="#" data-toggle="tooltip" data-placement="right" title="Computers">Computers and Internet</a></li>
                            
-                            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Home & Garden">Home and Garden</a></li>
-                            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Education">Education</a></li>
-                            <li><a href="index.html" data-toggle="tooltip" data-placement="right" title="Fiction">Fiction & Poetry</a></li>
+                            <li><a href="" ng-click="click1()" data-toggle="tooltip" data-placement="right" title="Home & Garden">Home and Garden</a></li>
+                            <li><a href="" ng-click="click1()" data-toggle="tooltip" data-placement="right" title="Education">Education</a></li>
+                            <li><a href="" ng-click="click1()" data-toggle="tooltip" data-placement="right" title="Fiction">Fiction & Poetry</a></li>
                         </ul>
                     </div>
                     <!--/.well -->
@@ -77,19 +79,19 @@
      <div class="list-group">
         <ul class="main-nav">
             <li>
-                <a href="index.html" class="list-group-item active" data-toggle="tooltip" data-placement="right" title="Home & Garden">
+                <a href="" ng-click="click1()" class="list-group-item active" data-toggle="tooltip" data-placement="right" title="Home & Garden">
                 <img src="resources/img/garden3.jpg" class="img-fluid" style="border: #000 1px solid;MAX-HEIGHT: 160px;MAX-WIDTH: 122px;-MS-INTERPOLATION-MODE: bicubic;">&nbsp;&nbsp;Home and Garden</a>
            </li>
            <li>
-               <a href="index.html" class="list-group-item" data-toggle="tooltip" data-placement="right" title="Fiction & Poetry">
+               <a href="" ng-click="click1()" class="list-group-item" data-toggle="tooltip" data-placement="right" title="Fiction & Poetry">
                <img src="resources/img/fict5.jpg" class="img-fluid" style="border: #000 1px solid;MAX-HEIGHT: 185px;MAX-WIDTH: 122px;-MS-INTERPOLATION-MODE: bicubic;">&nbsp;&nbsp;Fiction and Poetry</a>
            </li>
            <li>
-               <a href="index.html" class="list-group-item" data-toggle="tooltip" data-placement="right" title="Biography">
+               <a href="" ng-click="click1()" class="list-group-item" data-toggle="tooltip" data-placement="right" title="Biography">
                <img src="resources/img/bio1.png" class="img-fluid" style="border: #000 1px solid;MAX-HEIGHT: 172px;MAX-WIDTH: 122px;-MS-INTERPOLATION-MODE: bicubic;">&nbsp;&nbsp;Biography</a>
            </li>
            <li>
-               <a href="index.html" class="list-group-item" data-toggle="tooltip" data-placement="right" title="Children's">
+               <a href="" ng-click="click1()" class="list-group-item" data-toggle="tooltip" data-placement="right" title="Children's">
                <img src="resources/img/child3.jpg" class="img-fluid" style="border: #000 1px solid;MAX-HEIGHT: 122px;MAX-WIDTH: 122px;-MS-INTERPOLATION-MODE: bicubic;">&nbsp;&nbsp;Children's</a>
            </li>
         </ul>
@@ -126,8 +128,7 @@
                   </div>
                 </div>    
   <div class="jumbotron">
- 
-          
+  
        <div class="row">
                 <h3>Powell's Q&A: Gabe Hudson, Author of 'Gork, the Teenage Dragon'</h3>
                     <h5>by Gabe Hudson, July 5, 2017 10:56 AM</h5>
@@ -137,30 +138,32 @@
           </div>
                 <div class="col-2 col-sm-4 col-md-4">
                     <p class="lead">My new novel Gork, the Teenage Dragon has the plot of a John Hughes movie, but takes place at a high school for dragons. Think Sixteen Candles meets Harry Potter, if Harry had scales and a tail. The novel’s narrated by a sixteen year old dragon named Gork.</p> 
-                    <p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modal7">Read More »</a></p>
+                    <p><a class="btn btn-primary" href="" data-toggle="modal" data-target="#Modal7" data-keyboard='false' data-backdrop='static'>Read More »</a></p>
+                    
+                    
                 </div>
-                
           </div>    
             <p></p>
           </div>
+   
             <div class="row">
                 <div class="col-6 col-sm-6 col-lg-4">
                     <h3>Turtles All the Way Down Signed Edition</h3>
                     <p>The wait is over! John Green, the #1 bestselling author of The Fault in Our Stars, is back. It all begins with a fugitive billionaire and the promise of a cash reward. </p>
-                    <p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modal1">Read More »</a></p>
+                    <p><a class="btn btn-primary modal-trigger" href="" role="button" data-toggle="modal" data-target="#Modal1">Read More »</a></p>
                 </div>
                 <!--/span-->
                 <div class="col-6 col-sm-6 col-lg-4">
                     <h3>No Is Not Enough: Resisting Trumps Shock Politics and Winning the World We Need</h3>
                     <p>If anyone can take on Trump, it's Naomi Klein — the author of such powerful tomes as The Shock Doctrine and This Changes Everything. </p>
-                    <p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modal2">Read More »</a></p>
+                    <p><a class="btn btn-primary modal-trigger" href="" role="button" data-toggle="modal" data-target="#Modal2">Read More »</a></p>
                 </div>
                 <!--/span-->
                 
                 <div class="col-6 col-sm-6 col-lg-4">
                     <h3>You Don't Have to Say You Love Me</h3>
                     <p>You Don’t Have to Say You Love Me is a deeply raw memoir of Alexie’s complicated relationship with his mother — a woman he both revered and had disdain for, a woman he felt both pride and shame for. </p>
-                    <p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modal3">Read More »</a></p>
+                    <p><a class="btn btn-primary modal-trigger" href="" role="button" data-toggle="modal" data-target="#Modal3">Read More »</a></p>
                 </div>
                 
             </div>
@@ -169,28 +172,28 @@
                 <div class="col-6 col-sm-6 col-lg-4">
                     <h3>Wonder</h3>
                     <p>"Wonder is the best kids' book of the year," said Emily Bazelon, senior editor at Slate.com and author of Sticks and Stones: Defeating the Culture of Bullying and Rediscovering the Power of Character and Empathy. In a world where bullying among young people is an epidemic, this is a refreshing new narrative full of heart and hope. </p>
-                    <p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modal4">Read More »</a></p>
+                    <p><a class="btn btn-primary modal-trigger" href="" role="button" data-toggle="modal" data-target="#Modal4">Read More »</a></p>
                 </div>
                 <!--/span-->
                 
                 <div class="col-6 col-sm-6 col-lg-4">
                     <h3>A Little Life</h3>
                     <p>In an alternate universe, A Little Life would be the love-child of Hanya Yanagihara and Donna Tartt, and this is a beautiful thing. The story setup is reminiscent of The Secret History, but the language and themes are all Yanagihara. Spanning five decades, this is a hefty novel at 700 pages, but one that you will wish would never end. 
-</p>
-                    <p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modal5">Read More »</a></p>
+                    </p>
+                    <p><a class="btn btn-primary modal-trigger" href="" role="button" data-toggle="modal" data-target="#Modal5">Read More »</a></p>
                 </div>
                 <!--/span-->
                 
                 <div class="col-6 col-sm-6 col-lg-4">
                     <h3>To Kill a Mockingbird</h3>
                     <p>Compassionate, dramatic, and deeply moving, To Kill A Mockingbird takes readers to the roots of human behavior-to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 15 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.</p>
-                    <p><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modal6">Read More »</a></p>
+                    <p><a class="btn btn-primary modal-trigger" href="" role="button" data-toggle="modal" data-target="#Modal6">Read More »</a></p>
                 </div>
                 <!--/span-->
             </div>
             <!--/row-->
             
-            <div class="modal fade" id="Modal1" role="dialog">
+            <div class="modal fade" id="Modal1" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-sm">
 
               <!-- Modal content-->
@@ -207,7 +210,7 @@
             <!--modal-dialog-->
           </div>
             
-            <div class="modal fade" id="Modal2" role="dialog">
+            <div class="modal fade" id="Modal2" tabindex="-1" role="dialog">
             <div class="modal-dialog">
 
               <!-- Modal content-->
@@ -223,8 +226,42 @@
             </div>
             <!--modal-dialog-->
           </div>
+    
+            <div class="modal fade" id="Modal3" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                 <h4 class="modal-title">You Don't Have to Say You Love Me </h4>
+                 <h6 class="modal-title">by Sherman Alexie</h6>
+                 <p>You Don’t Have to Say You Love Me is a deeply raw memoir of Alexie’s complicated relationship with his mother — a woman he both revered and had disdain for, a woman he felt both pride and shame for.In his signature style, Alexie delivers stories of immeasurable pain cut with hilarious candor conveyed in both essays and poems. He shows us that we can learn just as much about ourselves as those we grieve for. </p>
+                 <a href="#" data-dismiss="modal">Dismiss</a>
+                </div>
+              </div>
+
+            </div>
+            <!--modal-dialog-->
+          </div>
+    
+            <div class="modal fade" id="Modal4" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                 <h4 class="modal-title">Wonder</h4>
+                 <h6 class="modal-title">by R J Palacio</h6>
+                 <p>"Wonder is the best kids' book of the year," said Emily Bazelon, senior editor at Slate.com and author of Sticks and Stones: Defeating the Culture of Bullying and Rediscovering the Power of Character and Empathy. In a world where bullying among young people is an epidemic, this is a refreshing new narrative full of heart and hope.R.J. Palacio has called her debut novel “a meditation on kindness” — indeed, every reader will come away with a greater appreciation for the simple courage of friendship. Auggie is a hero to root for, a diamond in the rough who proves that you can’t blend in when you were born to stand out.</p>
+                   <a href="#" data-dismiss="modal">Dismiss</a>
+                </div>
+              </div>
+
+            </div>
+            <!--modal-dialog-->
+          </div>
             
-            <div class="modal fade" id="Modal5" role="dialog">
+            <div class="modal fade" id="Modal5" tabindex="-1" role="dialog">
             <div class="modal-dialog">
 
               <!-- Modal content-->
@@ -241,24 +278,7 @@
             <!--modal-dialog-->
           </div>
             
-            <div class="modal fade" id="Modal3" role="dialog">
-            <div class="modal-dialog">
-
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-body">
-                 <h4 class="modal-title">You Don't Have to Say You Love Me </h4>
-                 <h6 class="modal-title">by Sherman Alexie</h6>
-                 <p>You Don’t Have to Say You Love Me is a deeply raw memoir of Alexie’s complicated relationship with his mother — a woman he both revered and had disdain for, a woman he felt both pride and shame for.In his signature style, Alexie delivers stories of immeasurable pain cut with hilarious candor conveyed in both essays and poems. He shows us that we can learn just as much about ourselves as those we grieve for. </p>
-                 <a href="#" data-dismiss="modal">Dismiss</a>
-                </div>
-              </div>
-
-            </div>
-            <!--modal-dialog-->
-          </div>
-
-            <div class="modal fade" id="Modal6" role="dialog">
+            <div class="modal fade" id="Modal6" tabindex="-1" role="dialog">
             <div class="modal-dialog">
 
               <!-- Modal content-->
@@ -276,24 +296,7 @@
             <!--modal-dialog-->
           </div>
             
-            <div class="modal fade" id="Modal4" role="dialog">
-            <div class="modal-dialog">
-
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-body">
-                 <h4 class="modal-title">Wonder</h4>
-                 <h6 class="modal-title">by R J Palacio</h6>
-                 <p>"Wonder is the best kids' book of the year," said Emily Bazelon, senior editor at Slate.com and author of Sticks and Stones: Defeating the Culture of Bullying and Rediscovering the Power of Character and Empathy. In a world where bullying among young people is an epidemic, this is a refreshing new narrative full of heart and hope.R.J. Palacio has called her debut novel “a meditation on kindness” — indeed, every reader will come away with a greater appreciation for the simple courage of friendship. Auggie is a hero to root for, a diamond in the rough who proves that you can’t blend in when you were born to stand out.</p>
-                   <a href="#" data-dismiss="modal">Dismiss</a>
-                </div>
-              </div>
-
-            </div>
-            <!--modal-dialog-->
-          </div>
-
-            <div class="modal fade" id="Modal7" role="dialog">
+            <div class="modal fade" id="Modal7" tabindex="-1" role="dialog">
             <div class="modal-dialog">
 
               <!-- Modal content-->
