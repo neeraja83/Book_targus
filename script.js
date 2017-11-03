@@ -32,16 +32,12 @@ app.controller('loginCtrl', ['$scope', '$location', function ($scope, $location)
 app.controller('TestCtrl', ['$scope', '$location',function($scope, $location) {
 
 $scope.click1 = function(){   
-     window.location = "http://127.0.0.1:8080/index.html";
+     window.location = "https://neeraja83.github.io/Book_targus/index.html";
 }
 
 $scope.click2 = function(){   
-     window.location = "http://127.0.0.1:8080/booksbr.html";
+     window.location = "https://neeraja83.github.io/Book_targus/booksbr.html";
 }
-
-
-
-
 }]);
 
 
