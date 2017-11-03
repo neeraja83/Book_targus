@@ -3,20 +3,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Bootstrap & AngularJS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+ 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+    <script src="script.js"></script>
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="resources/js/jquery.magnific-popup.js"></script>
+    <link rel="stylesheet" href="resources/css/magnific-popup.css">
+    <link rel="stylesheet" href="resources/css/jquery.magnific-popup.js">
+    
+    <!--Stylesheets-->
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
     
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <link rel="stylesheet" href="resources/css/magnific-popup.css">
-    <link rel="stylesheet" href="resources/css/jquery.magnific-popup.js">
     <link rel="stylesheet" href="resources/css/query1.css">
-    
+        
     <!--Favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
@@ -30,35 +41,39 @@
       
     <script>
         $(document).ready(function() {
+            
+        console.log("document is ready");
+ 
+        
+        
         $('.js--hero-text-box').waypoints(function(direction){
             if(direction="down"){
-             $('nav').addClass('sticky_hr');
+              $('nav').addClass('sticky_hr');
             } else {
-             $('nav').removeClass('sticky_hr');
+              $('nav').removeClass('sticky_hr');
             }
-                    
-                })
+        })
               //Set the carousel options
-              $('#myCarousel').carousel({pause: true,interval: 4000,});});
-              $('[data-toggle="tooltip"]').tooltip(); 
-              
+        $('#myCarousel').carousel({pause: true,interval: 4000,});});
+        $('[data-toggle="tooltip"]').tooltip(); 
     </script>
     <title>Targus</title>
 </head>
 
-<body>
+<body ng-app="RoutingApp" ng-controller="TestCtrl">
 <div class="page">
 <header>
     <nav>
            <div class="row nav_wrapper">
               <img src="resources/img/BookH.jpg" alt="Book logo" class="logo">
                <ul class="main-nav"><strong>
-                   <li><a href="index.html"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;&nbsp;Home</a></li>
-                   <li><a href="booksbr.html"><i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;&nbsp;Shop Books</a></li>
+                   <li><a href="" ng-click="click1()"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;&nbsp;Home</a></li>
+                   <li><a href="" ng-click="click2()"><i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;&nbsp;Shop Books</a></li>
                    <li><a href="#">How it works</a></li>
                    <li><a href="#">Book Collection</a></li>
-                   <li><a href="#" data-toggle="modal" data-target="#Modal7" data-whatever="@mdo">Sign up</a></li></strong>
+                   <li><a href="#" data-toggle="modal" data-target="#Modal7" data-keyboard='false' data-backdrop='static' data-whatever="@mdo">Sign up</a></li></strong>
                </ul>
+                <div ng-view></div>
            </div>
     </nav>
     
@@ -72,7 +87,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action = "http://127.0.0.1:3000/process_post" method = "POST">
+        <form action = "http://127.0.0.1:8080/booksbr.html" method = "POST">
           <div class="form-group">
            	<div class="input-group"> 
             <input type="text" class="form-control" id="recipient-name" placeholder="Login">
@@ -100,11 +115,11 @@
 
 <!-- Modal for arts -->
 <div class="container">
-<div class="modal fade" id="Modal_ae" role="dialog">
+<div class="modal fade" id="Modal_ae" tabindex="-1" role="dialog">
     <div class="modal-dialog">
           <!-- Modal content-->
       <div class="modal-content">
-         <h4 class="modal-title">Arts & Entertainment</h4><br>
+         <h4 class="modal-title"><br>&nbsp;&nbsp;Arts & Entertainment</h4><br>
         <div class="modal-body">
           
          <div class="row">
@@ -144,7 +159,7 @@
         </div>
         
         </div>
-          <a href="#" data-dismiss="modal">Dismiss</a>
+          <a href="#" data-dismiss="modal">&nbsp;&nbsp;Dismiss</a>
       </div>
     </div>
   </div>
@@ -152,11 +167,11 @@
     
 <!-- Modal for Biography -->
 <div class="container">
-<div class="modal fade" id="Modal_bi" role="dialog">
+<div class="modal fade" id="Modal_bi" tabindex="-1" role="dialog">
     <div class="modal-dialog">
           <!-- Modal content-->
       <div class="modal-content">
-         <h4 class="modal-title">Biography</h4><br>
+         <h4 class="modal-title"><br>&nbsp;&nbsp;Biography</h4><br>
         <div class="modal-body">
           
          <div class="row">
@@ -190,20 +205,19 @@
         </div>
         
         </div>
-          <a href="#" data-dismiss="modal">Dismiss</a>
+          <a href="#" data-dismiss="modal">&nbsp;&nbsp;Dismiss</a>
       </div>
     </div>
   </div>
 </div>
     
-
-    <!-- Modal for childrens -->
+<!-- Modal for childrens -->
 <div class="container">
-<div class="modal fade" id="Modal_ch" role="dialog">
+<div class="modal fade" id="Modal_ch" tabindex="-1" role="dialog">
     <div class="modal-dialog">
           <!-- Modal content-->
       <div class="modal-content">
-         <h4 class="modal-title">Children's</h4><br>
+         <h4 class="modal-title"><br>&nbsp;&nbsp;Children's</h4><br>
         <div class="modal-body">
           
          <div class="row">
@@ -238,38 +252,37 @@
         </div>
         
         </div>
-          <a href="#" data-dismiss="modal">Dismiss</a>
+          <a href="#" data-dismiss="modal">&nbsp;&nbsp;Dismiss</a>
       </div>
     </div>
   </div>
 </div>
- </header>   
+</header>   
     
-    
-  <div class="hero-text-box js--hero-text-box">
+<div class="hero-text-box js--hero-text-box">
         <h1>Welcome to Book Store!!</h1><br>&nbsp;&nbsp;&nbsp;<h2>&nbsp;&nbsp;&nbsp;Relax and enjoy the various subjects and browse through a diverse inventory of used books from different Authors.We have a healthy crop of new releases have satisfied readers’ appetite for everything from escapist page-turners to socially engaged fiction to candid nonfiction. We asked our staff to weigh in on their own favorite new books of 2017 so far. Here are their picks...</h2>
        <section class="book-thumb home-page-browse-grid">
-      <div class="row">
+       <div class="row">
         <div class="offset-md-2 col-md-10">
             <div class="row bcenter" style="display: inline-block;">
-                  <a href="#" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                  <img src="resources/img/arts.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_ae"><br>Arts and Entertainment</a>
+                  <a data-toggle="modal" href="" data-target="#Modal_ae" data-keyboard='false' data-backdrop='static' data-gallery="example-gallery" class="col-sm-4">
+                  <img src="resources/img/arts.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg"><br>Arts and Entertainment</a>
               
-                  <a href="#" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                  <img src="resources/img/biography.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_bi"><br>Biography</a>
+                  <a data-toggle="modal" href="" data-target="#Modal_bi" data-keyboard='false' data-backdrop='static' data-gallery="example-gallery" class="col-sm-4">
+                  <img src="resources/img/biography.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg"><br>Biography</a>
                                 
-                  <a href="#" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                  <img src="resources/img/child3.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_ch"><br>Children's</a>
+                  <a data-toggle="modal" href="" data-target="#Modal_ch" data-keyboard='false' data-backdrop='static' data-gallery="example-gallery" class="col-sm-4">
+                  <img src="resources/img/child3.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg"><br>Children's</a>
             </div><br><br>
             <div class="row bcenter" style="display: inline-block;">
-                <a href="#" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="resources/img/fict5.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_fp"><br>Fiction and Poetry</a>
+               <a data-toggle="modal" href="" data-target="#Modal_fp" data-keyboard='false' data-backdrop='static' data-gallery="example-gallery" class="col-sm-4">
+                <img src="resources/img/fict5.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg"><br>Fiction and Poetry</a>
 
-                <a href="#" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="resources/img/garden1.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_hg"><br>Home and Garden</a>
+               <a data-toggle="modal" href="" data-target="#Modal_hg" data-keyboard='false' data-backdrop='static' data-gallery="example-gallery" class="col-sm-4">
+                <img src="resources/img/garden1.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg"><br>Home and Garden</a>
 
-                <a href="#" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="resources/img/edu1.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_ed"><br>Education</a>
+               <a data-toggle="modal" href="" data-target="#Modal_ed" data-keyboard='false' data-backdrop='static' data-gallery="example-gallery" class="col-sm-4">
+                <img src="resources/img/edu1.jpg" class="img-fluid" width="165px" height="180px" style="border: #555 3px solid;-MS-INTERPOLATION-MODE: bicubic;" class="btn btn-info btn-lg"><br>Education</a>
             </div>
          </div>
        </div>
@@ -280,12 +293,19 @@
       <a class="btn btn-full" href="buy.html" data-toggle="tooltip" data-placement="right" title="Buy"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Buy</a>
       <a class="btn btn-ghost" href="sell.html" data-toggle="tooltip" data-placement="right" title="Sell">Sell </a>
      </div>
-         
+        
+    
   </div>
-    </div>
-    <!--page-->
+  <!--hero-box-->
+  
+    
+</div>
+    
+    
+<!--page-->
+
 <!--Testimonials-->
-    <section class="section-testimonials">
+<section class="section-testimonials">
             <div class="row">
                 <h2> Our Customers love our Books!!!!!</h2>
             </div>
@@ -314,8 +334,7 @@
     </section>
     
 <!-- Carousel -->
-
- <div class="container-fluid">
+<div class="container-fluid">
   <!--<h2>heading</h2>-->  
   <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
     <!-- Bottom carousel Indicators -->
@@ -377,8 +396,7 @@
 </div>
 
 <!-- Add Footer here-->
-
-    <footer>
+<footer>
     <div class="row">
         <div class="col span-1-of-2">
             <ul class="footer-nav">
@@ -389,7 +407,6 @@
                     <li><a href="#">Android App</a></li>
             </ul>
         </div>
-		
         <div class="col span-1-of-2">
             <ul class="social-links">
                     <li><a href="http://www.facebook.com" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="ion-social-facebook"></i></a></li>
@@ -398,18 +415,13 @@
                     <li><a href="https://www.instagram.com/accounts/login/" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="ion-social-instagram"></i></a></li>
             </ul>
         </div>
-        
         <div class="row">
-          <p>
-              
-               Copyright &copy; 2017 by Targus. All rights reserved.
-          </p>
+          <p>Copyright &copy; 2017 by Targus. All rights reserved.</p>
         </div>
 	</div>	
- </footer>
-        
-    <script src="Vendors/js/jquery.waypoints.min.js"></script>
-    
+    </footer>
+
+<script src="Vendors/js/jquery.waypoints.min.js"></script>
 
 </body>
 </html>
