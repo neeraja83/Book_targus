@@ -277,11 +277,13 @@ header{
     list-style:none;
     background-attachment: fixed;
 }
+
 .section-testimonials h2{
     font-family: 'Arvo', Georgia, Times, serif;
     padding: 2%;
     color: #e67e22;
 }
+
 .section-testimonials h4{
     font-family: 'Arvo', Georgia, Times, serif;
     padding: 2%;
@@ -292,30 +294,35 @@ header{
     display: inline-block;
     margin-right: 20px;
 }
+
 .section-testimonials ul li blockquote{
     padding: 2%;
     line-height: 145%;
     border-left: none;
     position: relative;
 }
+
 .section-testimonials ul li blockquote:before {
     content: "\201C";
     font-size: 400%;
-    display: block;
+    display:inline-block;
     position: absolute;
-    z-index: 77;
+    z-index: 50;
     top: -5px;
     left: -5px;
 }
+
 .section-testimonials ul li blockquote cite {
     font-size: 90%;
     margin-top: 25px;
     display: inline-block;
 }
+
 .section-testimonials ul li blockquote cite img {
     height: 45px;
     border-radius: 50%;
     margin-right: 10px;
+    
 }
    /* Bootstrap*/
 
