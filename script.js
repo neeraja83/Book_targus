@@ -38,6 +38,9 @@ $scope.click1 = function(){
 $scope.click2 = function(){   
      window.location = "https://neeraja83.github.io/Book_targus/booksbr.html";
 }
+
+
+
 }]);
 
 
