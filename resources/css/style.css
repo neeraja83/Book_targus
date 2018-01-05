@@ -71,7 +71,7 @@ header{
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
-      height: 160vh;
+      height: 115vh;
       width: 100%;
     }
 
@@ -480,4 +480,6 @@ footer p {
     filter: alpha(opacity=85);
     height: 100px;
 }
+
+
 
